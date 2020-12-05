@@ -8,37 +8,65 @@
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
 \usepackage{hyperref}% add hypertext capabilities
-%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-%\linenumbers\relax % Commence numbering lines
-
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
-%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
-%%text={7in,10in},centering,
-%%margin=1.5in,
-%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
-%%height=10in,a5paper,hmargin={3cm,0.8in},
-%]{geometry}
 
 \begin{document}
-
 \preprint{APS/123-QED}
-
 \title{Acoustics I project: rotating and resonant waves in a cylindrical cavity}
 \author{Mathieu Maréchal, Supervisor: Guillaume Penelet}
 \affiliation{
     M1 Wave Physics \& Acoustics\\Le Mans Université
 }%
-
 \date{\today}
+
 \begin{abstract}
-    This is an article describing a project done during the Winter semester of my Master 1 in Wave Physics. This article deals with rotating waves in a cylindrical cavity: a cylinder with a point source was studied and the way to generate rotating wave inside the resonator was studied analytically and numerically.
+    This is an article describing a project done during the Winter semester of the Master 1 in Wave Physics. This article deals with rotating waves in a cylindrical cavity: a cylinder with a point source was studied and the way to generate rotating wave inside the resonator was studied analytically and numerically.
 \end{abstract}
 
 \maketitle
-
-
 \section{Introduction}
 
+\section{Investigating the nodal lines of the cylindrical cavity}
+    The considered system is a cylinder having a loudspeaker at $(r_0, \theta_0)$ on its upper wall. This point source imposes a driving force $q_0$ oscillating at a $\omega$ frequency. The wave equation to solve in the cavity is inhomogenenous,
+\begin{equation}
+    \frac{\partial \tilde{p}^2}{\partial r^2} + \frac{1}{r} \frac{\partial \tilde{p}}{\partial r} + \frac{1}{r^2} \frac{\partial \tilde{p}^2}{\partial \theta^2} + k^2 \tilde{p} = -i \omega q_0 \delta(r - r_0),
+\end{equation}
+with $k = \omega/c_0$ and $\delta$ is the Dirac-Delta distribution.
+
+\begin{equation}
+    \tilde{p}(r, \theta) = \sum_{m,n} \tilde{A}_{mn} \Psi_{mn}
+\end{equation}
+
+
+
+Plugging the solution of the pressure field
+
+The pressure field form is the following 
+\begin{equation}
+    \tilde{p}(r, \theta) = \sum_{m,n} \tilde{A}_{mn} J_m(k_{mn}r)\cos(m \theta)
+\end{equation}
+
+We have
+\begin{equation}
+    \sum_n \left[ k^2 - k_{mn}^2 \right] \frac{\tilde{A}_{mn}}{2 - \delta_m^0} J_m(k_{mn}r) = - i \omega q_0 \delta(r - r_0)
+\end{equation}
+
+The inner product to imply orthogonality on the Bessel function $J_m (k_{mn} r)$
+\begin{equation}
+        \int_0^R r J_m (k_{mn} r) J_m (k_{mn'} r) dr = \begin{cases}
+            \frac{k^2_{mn} R^2 - m^2}{2 k^2_{mn}} J^2_m (k_{mn} R), &n = n'\\
+            0, & n \ne n'
+        \end{cases}
+\end{equation}
+
+\begin{equation}
+    \tilde{A}_{mn} =
+    \begin{cases}
+        \frac{2 - \delta_m^0}{k^2_{mn} - k^2} i \omega q_0 \Psi_{m'}(r_0), &m \ne m'\\
+
+    \end{cases}
+\end{equation}
+
+\nocite{*}
 \bibliography{biblio}% Produces the bibliography via BibTeX.
 
 \end{document}

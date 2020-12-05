@@ -1,7 +1,0 @@
-\contentsline {title}{Acoustics I project: rotating and resonant waves in a cylindrical cavity}{1}{section*.2}%
-\contentsline {abstract}{Abstract}{1}{section*.1}%
-\tocdepth@munge 
-\contentsline {section}{\numberline {}Contents}{1}{section*.3}%
-\tocdepth@restore 
-\contentsline {section}{\numberline {I}Introduction}{1}{section*.4}%
-\contentsline {section}{\numberline {}References}{1}{section*.5}%
