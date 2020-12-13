@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.5)  5 DEC 2020 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.5)  12 DEC 2020 20:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,31 +6,30 @@ entering extended mode
 **vorticalwaves.tex
 (./vorticalwaves.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-03> (/usr/share/texmf-dist/tex/latex/revtex/revtex4-2.cls
-Document Class: revtex4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
- Copyright (c) 2019 American Physical Society.
+L3 programming layer <2020-06-03> (/usr/share/texmf-dist/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
  mailto:revtex@aps.org
  Licensed under the LPPL:
 http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
  Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
- Based on work by David Carlisle <david at dcarlisle.demon.co.uk>Version (4.2c): Modified by Mark Doyle
- .
-ltxutil[2019/01/18/14:29:48 4.2c utilities package (portions licensed from W. E. Baxter web at superscript.com)]
-LaTeX Info: Redefining \@centercr on input line 315.
-Class revtex4-2 Info: Repairing broken LaTeX eqnarray on input line 365.
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
 \eqncolsep=\skip47
-Class revtex4-2 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 440.
-Class revtex4-2 Info: Repairing broken LateX \@sect on input line 762.
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
 \intertabularlinepenalty=\count167
 \@tbpen=\count168
 \@arstrutbox@hline=\box45
-Class revtex4-2 Info: Repairing broken LaTeX \@xbitor on input line 1793.
-Class revtex4-2 Info: Making \typeout \long on input line 2053.
-ltxfront[2019/01/18/14:29:48 4.2c frontmatter package (AO,DPC,MD)]
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
 \c@affil=\count169
 \c@collab=\count170
 \absbox=\box46
-ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E. Baxter web at superscript.com)]
+ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E. Baxter web at superscript.com)]
 \c@linecount=\count171
 \output@latex=\toks15
 \box@size@1=\box47
@@ -44,7 +43,7 @@ ltxgrid[2019/01/18/14:29:48 4.2c page grid package (portions licensed from W. E.
 \footsofar=\box54
 \pagegrid@col=\count172
 
-Class revtex4-2 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\; no patches applied. Please get a more up-to-date class, .
+Class revtex4-1 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\; no patches applied. Please get a more up-to-date class, .
 
 \c@part=\count173
 \c@section=\count174
@@ -63,19 +62,22 @@ Class revtex4-2 Warning: Failed to recognize \@vspace, \@vspacer, \@no@pgbk, \@n
 \@bibdataout=\write3
 \widetext@top=\box58
 \widetext@bot=\box59
-Class revtex4-2 Info: Selecting society aps on input line 7581.
-(/usr/share/texmf-dist/tex/latex/revtex/aps4-2.rtx
-File: aps4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX society APS selected on input line 37.
+Class revtex4-1 Info: Selecting society aip on input line 7542.
+(/usr/share/texmf-dist/tex/latex/revtex/aip4-1.rtx
+File: aip4-1.rtx 2010/07/25 4.1r AIP substyle for REVTeX
+Class revtex4-1 Info: RevTeX society AIP selected on input line 67.
 )
 
-Class revtex4-2 Warning: No journal specified, using default pra.
+Class revtex4-1 Warning: No journal specified, using default cha.
 
-Class revtex4-2 Info: APS journal PRA selected on input line 7584.
-(/usr/share/texmf-dist/tex/latex/revtex/aps10pt4-2.rtx
-File: aps10pt4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
-Class revtex4-2 Info: RevTeX pointsize 10pt selected on input line 36.
-) (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
+Using journal substyle cha.
+Class revtex4-1 Info: Reading file aps10pt4-1.rtx on input line 7547.
+(/usr/share/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+Class revtex4-1 Info: Overriding 10pt on input line 7547.
+ (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
 ) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -153,12 +155,12 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count194
 )
-Class revtex4-2 Info: Repairing natbib's \BibitemShut on input line 7588.
- (/usr/share/texmf-dist/tex/latex/revtex/revsymb4-2.sty
-Package: revsymb4-2 2019/01/18/14:29:48 4.2c (https://journals.aps.org/revtex/ for documentation)
-LaTeX Info: Redefining \frak on input line 101.
-LaTeX Info: Redefining \Bbb on input line 117.
-LaTeX Info: Redefining \REV@mathfrak on input line 125.
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
+ (/usr/share/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
+LaTeX Info: Redefining \frak on input line 95.
+LaTeX Info: Redefining \Bbb on input line 111.
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
 )) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
@@ -290,31 +292,31 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip57
 )
-Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 12.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 12.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 12.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 12.
+Class revtex4-1 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 13.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 13.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 13.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 13.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count271
 \l__pdf_internal_box=\box64
 ) (./vorticalwaves.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count272
@@ -335,7 +337,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box66
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 13.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
@@ -345,45 +347,74 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count278
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 13.
+LaTeX Info: Redefining \pageref on input line 13.
+LaTeX Info: Redefining \nameref on input line 13.
  (./vorticalwaves.out) (./vorticalwaves.out)
 \@outlinefile=\write4
-Class revtex4-2 Info: Taking \maketitle back from hyperref on input line 12.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (33.04164pt too wide) detected at line 59
-[] [][] \OML/cmm/m/it/10 rJ[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 J[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 k[]r\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dr \OT1/cmr/m/n/10 = []
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+[] [][]\OT1/cmr/m/n/10 ([]) [](\OML/cmm/m/it/10 m[]^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R$\OT1/cmr/m/n/10 , $[] [][]([]) [](\OML/cmm/m/it/10 m[]^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R$\OT1/cmr/m/n/10 , and
  []
 
-(./vorticalwaves.bbl) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+<figures/schema.pdf, id=44, 155.84021pt x 109.62456pt>
+File: figures/schema.pdf Graphic file (type pdf)
+<use figures/schema.pdf>
+Package pdftex.def Info: figures/schema.pdf  used on input line 56.
+(pdftex.def)             Requested size: 178.50311pt x 125.57545pt.
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 62.
+
+
+Overfull \hbox (14.62422pt too wide) detected at line 90
+[]
+ []
+
+<figures/modes.png, id=76, 797.8608pt x 523.9575pt>
+File: figures/modes.png Graphic file (type png)
+<use figures/modes.png>
+Package pdftex.def Info: figures/modes.png  used on input line 97.
+(pdftex.def)             Requested size: 510.0pt x 334.92392pt.
+<figures/source_pos.png, id=78, 586.1097pt x 560.8152pt>
+File: figures/source_pos.png Graphic file (type png)
+<use figures/source_pos.png>
+Package pdftex.def Info: figures/source_pos.png  used on input line 106.
+(pdftex.def)             Requested size: 229.49844pt x 219.59845pt.
+(./vorticalwaves.bbl) [2 <./figures/schema.pdf>] [3 <./figures/modes.png> <./figures/source_pos.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (./vorticalwaves.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `vorticalwaves.out' has not changed.
-(rerunfilecheck)             Checksum: 6034D1D3E3D509CBA62F7180856E8F26;377.
+(rerunfilecheck)             Checksum: 0162FFB4C590D7E0611952572BA8C785;724.
  ) 
 Here is how much of TeX's memory you used:
- 8298 strings out of 480478
- 117338 string characters out of 5905959
- 407430 words of memory out of 5000000
- 24174 multiletter control sequences out of 15000+600000
- 538351 words of font info for 46 fonts, out of 8000000 for 9000
+ 8372 strings out of 480478
+ 118718 string characters out of 5905959
+ 425884 words of memory out of 5000000
+ 24205 multiletter control sequences out of 15000+600000
+ 547172 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,35p,359b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on vorticalwaves.pdf (1 page, 146678 bytes).
+ 38i,19n,35p,1499b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on vorticalwaves.pdf (3 pages, 819474 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
