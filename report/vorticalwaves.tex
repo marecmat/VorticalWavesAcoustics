@@ -28,6 +28,8 @@ Cylindrical waveguides and modal analysis are among the key notions tackled in t
 
 \section{Investigating the nodal lines of the cylindrical cavity using a single point source}
 
+Let a rigid cylinder of radius $R$ and length $d$ containing air, with density $\rho_0$ and sound celerity $c_0$. There is a point source inside of the cylinder creating an acoustic field $\tilde{p}(\vec{r}, t)$, where $\vec{r} = (r, \theta, z)$ located at $\vec{r}_0 = (r_0, \theta_0, z_0)$. This equation satisfies the Helmholtz equation
+
 The system considered in this paper is a cylinder which includes one (and thereafter several) loudspeaker at $(r_0, \theta_0)$ on its upper wall. This point source imposes a driving force $q_0$ oscillating at a $\omega$ frequency. The cylinder is filled with air, a lossless medium with density $\rho_0 = 1.2$ kg.m$^3$ and sound celerity $c_0 = 343$ m/s. A representation of the studied system is proposed in figure \ref{fig:schema}. The edges of the cavity are all considered rigid, thus giving the following boundary conditions on the acoustic field
 \begin{equation}
    \begin{split}
@@ -50,6 +52,8 @@ with $k = \omega/c_0$ being the wavenumber and $\delta$ is the Dirac-Delta distr
     \tilde{p}(r, \theta) = \sum_{m,n} \tilde{A}_{mn} \Psi_{mn}.
 \end{equation}
 Using $\Psi_{mn} = J_m (k_{mn}r)\left[ \tilde{A}_{\theta m} \cos(m \theta) + \tilde{B}_{\theta m} \sin(m \theta) \right]$ as the eigenfunction, we will be able to find the amplitude expression. Next, one has to orthogonalize each part of the eigenfunction using successive scalar products $\langle \Psi_{mn} | \Psi_{m'n} \rangle = \int_a^b  \Psi_{mn}\Psi_{m'n} dx $ on the cosine term, sine term and finally the Bessel function, with respectively $\frac{1}{2\pi}\int_0^{2\pi}(\ldots)\cos(m'\theta) d\theta$, $\frac{1}{2\pi}\int_0^{2\pi}(\ldots)\sin(m'\theta) d\theta$, and $\int_0^R r (\ldots) J_m(k_{mn}r)dr$. These operations will allow us to determine the expression of the modal expansion of the pressure field.\\
+
+
 
 \begin{figure}
     \centering
@@ -109,7 +113,90 @@ One way of studying and trying to observe rotational waves would be to put our c
 \end{figure}
 
 \subsection{Extension to 3D}
+\textbf{Nouvelle façon de procéder}
+
+The source term $q^{\star} = -i \omega q_0$. The wavenumber is
+\begin{equation}
+    k^2 = k_{mn}^2 + k_z^2,
+\end{equation}
+with $k_z = \frac{l \pi}{d}$
+
+scalar product better explanation
+\begin{equation}
+    \int_0^l \cos^2\left( \frac{l \pi}{d}z \right) dz = 
+    \begin{cases}    
+        d, & l = 0\\
+        d/2, & l \ne 0
+    \end{cases} \label{eq:dp_1}
+\end{equation}
+
+\begin{equation}
+    \int_0^{2 \pi} \cos^2\left( m \theta \right) d\theta = 
+    \begin{cases}    
+        2 \pi, & m = 0\\
+        \pi, & m \ne 0
+    \end{cases} \label{eq:dp_2}
+\end{equation}
+
+\begin{equation}
+    \int_0^{2 \pi} \sin^2\left( m \theta \right) d\theta = 
+    \begin{cases}    
+        0, & m = 0\\
+        \pi, & m \ne 0
+    \end{cases} \label{eq:dp_3}
+\end{equation}
+
+\begin{equation}
+    \begin{split}
+        \int_0^{R} &r J^2_m (k_{mn} r)dr \\ &=
+    \begin{cases}    
+        \quad  \quad \quad 1/2, & k_{mn}R = 0\\
+        \frac{k^2_{mn} R^2 - m^2}{2 k^2_{mn}} J^2_m (k_{mn} R), & k_{mn}R \ne 0
+    \end{cases}
+    \end{split} \label{eq:dp_4}
+\end{equation}
+
+The equation stating some particular integral (or dot product) values can be rewritten using the Kronecker delta symbol defined as 
+\begin{equation}
+   \delta_i^j = \begin{cases}
+       1, & i = j\\ 0, & i \ne j
+   \end{cases} 
+\end{equation}
+
+That way, equations (\ref{eq:dp_1}), (\ref{eq:dp_2}) and (\ref{eq:dp_3})  are respectively equal to $\cfrac{d}{2 - \delta_l^0}, \pi(1 + \delta_m^0)$ and $\pi(1 - \delta_m^0)$. Finally, the case for $k_{mn}R = 0$ equation (\ref{eq:dp_4}) can be discarded as it is a trivial solution and non-physical.
+
+The pressure field is
+\begin{equation}
+    \begin{split}
+        \tilde{p}(r, \theta, z) &= \sum_{m,n,l}^{\infty} \tilde{C}_{mnl} \Psi_{mnl}\\
+                                &= \sum_m^{\infty}\sum_n^{\infty}\sum_l^{\infty} \tilde{A}_{mn} J_m(k_{mn}r) \cos(k_z z)\\ &\times \left[ \tilde{A}_{\theta_{mn}} \cos(m \theta) + \tilde{B}_{\theta_{mn}} \sin(m \theta) \right],
+    \end{split}
+\end{equation}
+and the amplitude term $\tilde{A_{mn}}$ can be expressed inside $\tilde{A}_{\theta_{mn}}$ and $\tilde{B}_{\theta_{mn}}$. Therefore, their names will be changed respectively to $\tilde{A}_{mnl}$ and $\tilde{A}_{mnl}$.
+
+The solution for the amplitude terms can be written as 
+\begin{equation}
+    \begin{split}
+        \tilde{A}_{mnl} = &\frac{2 q^{\star} r_0 k^2_{mn} \cos(k_z z_0) \cos(m \theta_0)}{\pi d\left[k^2 - k^2_{mn}\right] \left[(k_{mn}R)^2 - m^2 \right]}\\  &\times \frac{2 - \delta_l^0}{1 + \delta_m^0} \frac{J_m(k_{mn}r_0)}{J^2_{m}(k_{mn}R)},
+    \end{split}
+\end{equation}
+and
+\begin{equation}
+    \begin{split}
+        \tilde{B}_{mnl} = &\frac{2 q^{\star} r_0 k^2_{mn} \cos(k_z z_0) \sin(m \theta_0)}{\pi d\left[k^2 - k^2_{mn}\right] \left[(k_{mn}R)^2 - m^2 \right]}\\  &\times \frac{2 - \delta_l^0}{1 - \delta_m^0} \frac{J_m(k_{mn}r_0)}{J^2_{m}(k_{mn}R)}.
+    \end{split}
+\end{equation}
+
+\section{Simulating rotating waves in the cavity}
+
+
 \section{Extension of the system with several phase-shifted sources}
+
+\section{Perspectives on this short study}
+- FEM simulation
+- experimental setup
+- understand the phenomenon more, to get how to produce pure rotating waves --> introduce something like the standing wave ratio but for rotating ?
+- all kinds of things
 
 \section{Conclusion}
 One perspective from this study is that an experimental study could follow from the results obtained above. A simple apparatus can be developed and some experimental data could be compared to the theoretical and numerical study that was conducted here. Every content of this project including the scripts is available on Github: \url{https://github.com/marecmat/VorticalWavesAcoustics}
