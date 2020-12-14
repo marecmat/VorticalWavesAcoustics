@@ -21,7 +21,7 @@ pts = 100      # Spatial resolution
 R = 0.35        # Radius of the cavity
 c0 = 340        # speed of sound in the cavity
 r0 = 0.192       # radial position of the point source in the cavity 
-t0 = 0          # angle to locate the cavity (neglected here)
+t0 = np.pi / 2          # angle to locate the cavity (neglected here)
 q0 = 1e-6          # driving force of the point source
 theta = np.arange(0, 2 * np.pi, 0.01 * np.pi)
 r = np.linspace(0, R, pts)
@@ -38,8 +38,8 @@ for m in tqdm(range(1, 4)):
         # Zeros of the derivative of Bessel functions == modes of the system
         kmn = sp.jnp_zeros(m, n + 1)[-1] / R # 1.84/R #
         fc = np.zeros((r.size, theta.size))
-        amp = (2 * 1j * om * q0 * r0 / k**2)
         for t in range(len(theta)):
+            amp = (2 * 1j * om * q0 * r0 * np.cos(m * (t - t0)) / k**2)
             bess_ratio = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
             # sumterm = (2 / (kmn**2 - k**2)) * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2))))
             sumterm = np.array([(2 / (kmn**2 - k**2)) * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2)))) for m in range(m + 1)]).sum()

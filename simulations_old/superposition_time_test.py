@@ -6,20 +6,20 @@ from tqdm import tqdm
 mpl.rcParams['pcolor.shading'] = 'auto'
 
 m = 1; n = 0                                    # mode to study in the cavity
-pts = 1000                                      # Spatial resolution
-R = 0.35                                        # Radius of the cavity
+pts = 100                                      # Spatial resolution
+R = 1                                        # Radius of the cavity
 c0 = 340                                        # speed of sound in the cavity
-r0 = 0.15                                       # radial position of the point source in the cavity 
-q0 = 1e-2                                       # driving force of the point source
+r0 = 0.5                                       # radial position of the point source in the cavity 
+q0 = 1000                                       # driving force of the point source
 t0 = [0, 2 * np.pi / 3, 4 * np.pi / 3]          # angle to locate the cavity (neglected here)
 phis = [0, 2 * np.pi / 3, 4 * np.pi / 3]
 colors = ['b', 'g', 'r']
-f = np.linspace(0.1, 2000, pts)
-om = 2 * np.pi * f
-k = om / c0
+
 # Zeros of the derivative of Bessel functions == modes of the system
 kmn = sp.jnp_zeros(m, n + 1)[-1] / R # 1.84/R #
-theta = np.arange(0, 2 * np.pi, 0.01 * np.pi)
+om = kmn * c0
+k = kmn
+theta = np.arange(0, 2 * np.pi, pts)
 r = np.linspace(0, R, pts)
 #k = kmn
 #om = k * c0
@@ -38,13 +38,21 @@ for ax, timev in tqdm(zip(axs.flat, [0.0001, 0.0005, 0.001, 0.002, 0.003, 0.004,
         fc = np.zeros((r.size, theta.size), dtype=complex)
         ax.plot(theta0, r0, '{}o'.format(c), mfc='none', label='source')
 
-        amp = (2 * 1j * om * q0 * np.sin(m * theta0) * r0 / k**2)
         for t in range(len(theta)):
+            amp = (2 * 1j * r0 * om * q0 * np.sin(m * (t - theta0)) / k**2)
             bess_ratio = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
-            sumterm = np.array([(2 / (kmn**2 - k**2)) * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2)))) for m in range(m + 1)], dtype=complex).sum()
-            amplterm = amp * (1 / k**2) + sumterm
+            sumterm = np.array([(2 / (kmn**2 - k**2)) * amp * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2)))) for m in range(m + 1)], dtype=complex).sum()
+            amplterm = (1 / k**2) + sumterm
             fgt = amplterm * sp.jv(m, kmn * r) * np.cos(m * theta[t])
-            fc[:, t] = fgt.real * np.exp(1j * (om * timev) - phi0)
+            fc[:, t] = fgt.real * np.exp(1j * om * timev + phi0)
+
+        # amp = (2 * 1j * om * q0 * np.sin(m * theta0) * r0 / k**2)
+        # for t in range(len(theta)):
+        #     bess_ratio = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
+        #     sumterm = np.array([(2 / (kmn**2 - k**2)) * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2)))) for m in range(m + 1)], dtype=complex).sum()
+        #     amplterm = amp * (1 / k**2) + sumterm
+        #     fgt = amplterm * sp.jv(m, kmn * r) * np.cos(m * theta[t])
+        #     fc[:, t] = fgt.real * np.exp(1j * (om * timev) - phi0)
         
         allfields.append(fc)
         superp_fields = np.add(superp_fields, fc)

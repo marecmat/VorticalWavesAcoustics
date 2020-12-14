@@ -6,7 +6,7 @@ from tqdm import tqdm
 import matplotlib.animation as animation
 mpl.rcParams['pcolor.shading'] = 'auto'
 
-m = 1; n = 1                                    # mode to study in the cavity
+m = 1; n = 0                                    # mode to study in the cavity
 pts = 1000                                      # Spatial resolution
 R = 0.35                                        # Radius of the cavity
 c0 = 340                                        # speed of sound in the cavity
@@ -39,11 +39,11 @@ def pressf(timev):
         fc = np.zeros((r.size, theta.size), dtype=complex)
         ax.plot(theta0, r0, 'bo', label='source')
 
-        amp = (2 * 1j * om * q0 * np.sin(m * theta0) * r0 / k**2)
         for t in range(len(theta)):
+            amp = (2 * 1j * r0 * om * q0 * np.sin(m * (t - theta0)) / k**2)
             bess_ratio = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
-            sumterm = np.array([(2 / (kmn**2 - k**2)) * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2)))) for m in range(m + 1)], dtype=complex).sum()
-            amplterm = amp * (1 / k**2) + sumterm
+            sumterm = np.array([(2 / (kmn**2 - k**2)) * amp * bess_ratio * (1 / (1 - (m**2 / (kmn**2 * R**2)))) for m in range(m + 1)], dtype=complex).sum()
+            amplterm = (1 / k**2) + sumterm
             fgt = amplterm * sp.jv(m, kmn * r) * np.cos(m * theta[t])
             fc[:, t] = fgt.real * np.exp(1j * om * timev + phi0)
         

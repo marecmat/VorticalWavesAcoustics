@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.5)  12 DEC 2020 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.11.5)  14 DEC 2020 09:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -361,60 +361,61 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
 [] [][]\OT1/cmr/m/n/10 ([]) [](\OML/cmm/m/it/10 m[]^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R$\OT1/cmr/m/n/10 , $[] [][]([]) [](\OML/cmm/m/it/10 m[]^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R$\OT1/cmr/m/n/10 , and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
-<figures/schema.pdf, id=44, 155.84021pt x 109.62456pt>
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<figures/schema.pdf, id=79, 155.84021pt x 109.62456pt>
 File: figures/schema.pdf Graphic file (type pdf)
 <use figures/schema.pdf>
-Package pdftex.def Info: figures/schema.pdf  used on input line 56.
+Package pdftex.def Info: figures/schema.pdf  used on input line 60.
 (pdftex.def)             Requested size: 178.50311pt x 125.57545pt.
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 62.
-
-
-Overfull \hbox (14.62422pt too wide) detected at line 90
+Overfull \hbox (14.62422pt too wide) detected at line 94
 []
  []
 
-<figures/modes.png, id=76, 797.8608pt x 523.9575pt>
+<figures/modes.png, id=84, 797.8608pt x 523.9575pt>
 File: figures/modes.png Graphic file (type png)
 <use figures/modes.png>
-Package pdftex.def Info: figures/modes.png  used on input line 97.
+Package pdftex.def Info: figures/modes.png  used on input line 101.
 (pdftex.def)             Requested size: 510.0pt x 334.92392pt.
-<figures/source_pos.png, id=78, 586.1097pt x 560.8152pt>
+<figures/source_pos.png, id=86, 586.1097pt x 560.8152pt>
 File: figures/source_pos.png Graphic file (type png)
 <use figures/source_pos.png>
-Package pdftex.def Info: figures/source_pos.png  used on input line 106.
+Package pdftex.def Info: figures/source_pos.png  used on input line 110.
 (pdftex.def)             Requested size: 229.49844pt x 219.59845pt.
-(./vorticalwaves.bbl) [2 <./figures/schema.pdf>] [3 <./figures/modes.png> <./figures/source_pos.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
+[2 <./figures/schema.pdf>] [3 <./figures/modes.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix] on input line 203.
+
+(./vorticalwaves.bbl) [4 <./figures/source_pos.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
  (./vorticalwaves.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `vorticalwaves.out' has not changed.
-(rerunfilecheck)             Checksum: 0162FFB4C590D7E0611952572BA8C785;724.
+(rerunfilecheck)             Checksum: 57E138AF9CF8F8506A53697845345C8D;891.
  ) 
 Here is how much of TeX's memory you used:
- 8372 strings out of 480478
- 118718 string characters out of 5905959
- 425884 words of memory out of 5000000
- 24205 multiletter control sequences out of 15000+600000
+ 8391 strings out of 480478
+ 118935 string characters out of 5905959
+ 410997 words of memory out of 5000000
+ 24212 multiletter control sequences out of 15000+600000
  547172 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,19n,35p,1499b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on vorticalwaves.pdf (3 pages, 819474 bytes).
+ 38i,22n,35p,1499b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on vorticalwaves.pdf (4 pages, 844654 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 158 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 192 compressed objects within 2 object streams
+ 39 named destinations out of 1000 (max. 500000)
+ 104 words of extra memory for PDF output out of 10000 (max. 10000000)
 
