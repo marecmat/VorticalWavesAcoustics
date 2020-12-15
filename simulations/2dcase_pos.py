@@ -13,12 +13,16 @@ mpl.rc('font', **font)
 fig, axs = plt.subplots(
     2, 2,
     subplot_kw={'projection': 'polar'},
-    tight_layout=False,
+    tight_layout=True,
     figsize=(7.1, 5)
 )
 
 def kronecker(i, j):
     return 1 if i == j else 0
+
+def nearid(array, value):
+    return (np.abs(np.asarray(array) - value)).argmin()
+
 
 pts = 100
 R = 1
@@ -31,7 +35,7 @@ def amps(m, n, pos, om, q0):
     r0, a0 = pos
     dm0 = kronecker(m, 0)
     kmn = sp.jnp_zeros(m, n + 1)[-1] / R 
-    qstar = om * q0
+    qstar = -1j * om * q0
     
     bst = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
     #print(bst, kmn)
@@ -41,7 +45,8 @@ def amps(m, n, pos, om, q0):
             / ((1 - dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
     return amn, bmn, kmn
 
-def pressure_field(t, om, q0, pos, phi):
+def pressure_field(M, N, om, q0, pos, phi):
+    t = 1e-5
     prt = np.zeros((pts, pts), dtype=complex)
     for m in range(1, M + 1):
         for n in range(0, N + 1):
@@ -50,41 +55,41 @@ def pressure_field(t, om, q0, pos, phi):
             prt += p_given_mode    
     return prt * np.exp(1j * (om * t - phi))
 
-q0 = 1e-3
+q0 = 1e-2
 c0 = 343
-k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
-print(k_cav)
-k = k_cav + 1
-om = k * c0
+M = 2; N = 1
 
-for t, ax in zip([0, .8e-3, 1.6e-3, 5e-3], axs.flat):
-    pos1 = (R/2, np.pi/2)
-    pos2 = (R/2, 0)
-    pos3 = (R/2, 3*np.pi/2)
-    pos4 = (R/2, np.pi)
+letters = ['a', 'b', 'c', 'd']
+pos = [
+    (0.50, np.pi),
+    (0.75, np.pi/4),
+    (0.20, 5*np.pi/4),
+    (0.1, np.pi/2)
+]
 
-    p1 = pressure_field(t, om, q0, pos1, 0)
-    ax.plot(pos1[1], pos1[0], 'ko', mfc='none', label='source 1')
-    p2 = pressure_field(t, om, q0, pos2, 3 * np.pi / 2)
-    ax.plot(pos2[1], pos2[0], 'ko', mfc='none', label='source 2')
-    p3 = pressure_field(t, om, q0, pos3, np.pi)
-    ax.plot(pos3[1], pos3[0], 'ko', mfc='none', label='source 1')
-    p4 = pressure_field(t, om, q0, pos4, np.pi / 2)
-    ax.plot(pos4[1], pos4[0], 'ko', mfc='none', label='source 2')
+for let, pos1, ax in zip(letters, pos, axs.flat):
+    k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
+    k = k_cav + 0.05 * k_cav
+    om = k * c0
 
-    # pos3 = (R/2, 4 * np.pi / 3)
-    # p3 = pressure_field(t, om, q0, pos3, pos2[1])
-    # ax.plot(pos3[1], pos3[0], 'mo', label='source 3')
-    prt = p1 + p2 + p3 + p4
-    # ax.plot(theta[0], radius[50], 'm*')
+    p = pressure_field(M, N, om, q0, pos1, 0)
+    ps = p[nearid(radius, pos1[0]), nearid(theta, pos1[1])]
+    p = p / ps #/ p[nearid(radius, pos1[0]), nearid(theta, pos1[1])]
 
+    ax.plot(pos1[1], pos1[0], 'ko', mfc='none')
+    prt = p # + p2 + p3 + p4
 
-    oui = ax.pcolormesh(TT, RR, prt.real)#, cmap='RdBu_r')
+    oui = ax.pcolormesh(TT, RR, prt.real, cmap='RdBu_r')
     fig.colorbar(oui, ax=ax)
-    ax.set_title("t = {:.4f} s".format(t))
-    ax.set_rticks([0, R/4, R/2, 3*R/4, R])
+    ax.set_title(r"{}.".format(let))
+    print(let, pos1[0], pos1[1])
+    ax.set_rticks([R/2, R])
+    ax.set_rlabel_position(270)
+
     # ax.set_rlabel_position(-np.pi/2)
-    ax.set_xticks(np.pi/180. * np.arange(45, 316, 90))
+    # ax.set_xticks(np.pi/180. * np.arange(45, 316, 90))
+    ax.set_xticks([np.pi/4, 3*np.pi/4, 5*np.pi/4, 7*np.pi/4])
+    ax.set_xticklabels([r"$\pi$/4", r"3$\pi$/4", r"5$\pi$/4", r"7$\pi$/4"])
     ax.set_theta_direction(-1)
     ax.set_theta_zero_location("N") # Zero on top (north)
     ax.grid(True)
