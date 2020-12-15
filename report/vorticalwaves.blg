@@ -36,47 +36,45 @@ Name 1 in "Arturo O. Santillán, and Karen Volke-Sepúlveda" has a comma at the 
 while executing---line 3465 of file aipnum4-1.bst
 Warning--missing journal in santillan2009
 Warning--missing journal in rona2007
-Warning--missing journal in guidelines
-Warning--empty year in guidelines
-You've used 6 entries,
+You've used 5 entries,
             5918 wiz_defined-function locations,
-            1624 strings with 15201 characters,
-and the built_in function-call counts, 3758 in all, are:
-= -- 197
-> -- 69
-< -- 40
-+ -- 30
-- -- 31
-* -- 514
-:= -- 406
-add.period$ -- 8
-call.type$ -- 6
-change.case$ -- 20
-chr.to.int$ -- 8
-cite$ -- 11
-duplicate$ -- 404
-empty$ -- 241
-format.name$ -- 28
-if$ -- 634
+            1621 strings with 15156 characters,
+and the built_in function-call counts, 3099 in all, are:
+= -- 158
+> -- 58
+< -- 37
++ -- 25
+- -- 28
+* -- 429
+:= -- 324
+add.period$ -- 6
+call.type$ -- 5
+change.case$ -- 15
+chr.to.int$ -- 7
+cite$ -- 8
+duplicate$ -- 335
+empty$ -- 185
+format.name$ -- 23
+if$ -- 516
 int.to.chr$ -- 1
-int.to.str$ -- 13
-missing$ -- 65
-newline$ -- 64
-num.names$ -- 12
-pop$ -- 237
+int.to.str$ -- 12
+missing$ -- 56
+newline$ -- 61
+num.names$ -- 9
+pop$ -- 196
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 15
 quote$ -- 0
-skip$ -- 126
+skip$ -- 105
 stack$ -- 0
-substring$ -- 63
-swap$ -- 333
-text.length$ -- 5
+substring$ -- 50
+swap$ -- 281
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 61
-warning$ -- 6
-while$ -- 16
+type$ -- 49
+warning$ -- 4
+while$ -- 13
 width$ -- 0
-write$ -- 79
+write$ -- 73
 (There were 5 error messages)
