@@ -3,11 +3,10 @@
 \BOOKMARK [1][-]{section*.3}{Introduction}{section*.2}% 3
 \BOOKMARK [1][-]{section*.4}{Derivation of the pressure field inside the cylinder using modal analysis}{section*.2}% 4
 \BOOKMARK [2][-]{section*.5}{Modal expansion in the two-dimensional case}{section*.4}% 5
-\BOOKMARK [1][-]{section*.6}{Investigating the nodal lines of the cavity using a single point source}{section*.2}% 6
-\BOOKMARK [2][-]{section*.7}{Resonant modes of the cavity}{section*.6}% 7
-\BOOKMARK [2][-]{section*.8}{Influence of the point source parameters on the resonances}{section*.6}% 8
-\BOOKMARK [2][-]{section*.9}{Adding more sources in the cavity}{section*.6}% 9
-\BOOKMARK [1][-]{section*.10}{Simulating rotating waves in the cavity}{section*.2}% 10
-\BOOKMARK [1][-]{section*.11}{Extension of the study to 3D}{section*.2}% 11
-\BOOKMARK [1][-]{section*.12}{Perspectives on this short study}{section*.2}% 12
-\BOOKMARK [1][-]{section*.13}{Conclusion}{section*.2}% 13
+\BOOKMARK [1][-]{section*.6}{Resonant modes of the cavity and influence of the point source parameters on the resonances}{section*.2}% 6
+\BOOKMARK [2][-]{section*.7}{Investigation with one source}{section*.6}% 7
+\BOOKMARK [2][-]{section*.8}{Adding more sources in the cavity}{section*.6}% 8
+\BOOKMARK [1][-]{section*.9}{Simulating rotating waves in the cavity}{section*.2}% 9
+\BOOKMARK [1][-]{section*.10}{Extension of the study to 3D}{section*.2}% 10
+\BOOKMARK [1][-]{section*.11}{Perspectives on this short study}{section*.2}% 11
+\BOOKMARK [1][-]{section*.12}{Conclusion}{section*.2}% 12

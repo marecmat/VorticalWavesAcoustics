@@ -11,7 +11,7 @@ font = {'family': 'serif',
 mpl.rc('font', **font)
 
 fig, axs = plt.subplots(
-    2, 2,
+    1, 1,
     subplot_kw={'projection': 'polar'},
     tight_layout=False,
     figsize=(7.1, 5)
@@ -53,40 +53,44 @@ def pressure_field(t, om, q0, pos, phi):
 q0 = 1e-3
 c0 = 343
 k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
-print(k_cav)
-k = k_cav + 1
+k = k_cav + 0.01
 om = k * c0
 
-for t, ax in zip([0, .8e-3, 1.6e-3, 5e-3], axs.flat):
+ax = axs
+for t, cm in zip([1.3e-3, 1.8e-3, 2.3e-3, 2.8e-3], ['Purples', 'Blues', 'Greens', 'Oranges']):
     pos1 = (R/2, np.pi/2)
     pos2 = (R/2, 0)
     pos3 = (R/2, 3*np.pi/2)
     pos4 = (R/2, np.pi)
-
     p1 = pressure_field(t, om, q0, pos1, 0)
-    ax.plot(pos1[1], pos1[0], 'ko', mfc='none', label='source 1')
+    ax.plot(pos1[1], pos1[0], 'ko', mfc='none')#, label='source 1')
     p2 = pressure_field(t, om, q0, pos2, 3 * np.pi / 2)
-    ax.plot(pos2[1], pos2[0], 'ko', mfc='none', label='source 2')
+    ax.plot(pos2[1], pos2[0], 'ko', mfc='none')#, label='source 2')
     p3 = pressure_field(t, om, q0, pos3, np.pi)
-    ax.plot(pos3[1], pos3[0], 'ko', mfc='none', label='source 1')
+    ax.plot(pos3[1], pos3[0], 'ko', mfc='none')#, label='source 1')
     p4 = pressure_field(t, om, q0, pos4, np.pi / 2)
-    ax.plot(pos4[1], pos4[0], 'ko', mfc='none', label='source 2')
+    ax.plot(pos4[1], pos4[0], 'ko', mfc='none')#, label='source 2')
 
+    ax.plot(0, 0.6, 'k+', markersize=8)
+    ax.plot(2 * np.pi / 5, 0.3, 'k+', markersize=8)
     # pos3 = (R/2, 4 * np.pi / 3)
     # p3 = pressure_field(t, om, q0, pos3, pos2[1])
     # ax.plot(pos3[1], pos3[0], 'mo', label='source 3')
     prt = p1 + p2 + p3 + p4
+    prt = prt.real / np.max(prt.real)
     # ax.plot(theta[0], radius[50], 'm*')
 
-
-    oui = ax.pcolormesh(TT, RR, prt.real)#, cmap='RdBu_r')
-    fig.colorbar(oui, ax=ax)
-    ax.set_title("t = {:.4f} s".format(t))
-    ax.set_rticks([0, R/4, R/2, 3*R/4, R])
+    # ax.plot(0, 0, 'k', label='t = {} s'.format(t)) # for legend
+    oui = ax.contour(TT, RR, prt, 4, cmap=cm)
+    # fig.colorbar(oui, ax=ax)
+    # ax.clabel(oui, fontsize=11, inline=1, fmt='%1.1f')
+    # ax.set_title("t = {:.4f} s".format(t))
+    ax.set_rticks([])
     # ax.set_rlabel_position(-np.pi/2)
-    ax.set_xticks(np.pi/180. * np.arange(45, 316, 90))
+    ax.set_xticks(np.pi/180. * np.arange(0, 359, 90))
     ax.set_theta_direction(-1)
     ax.set_theta_zero_location("N") # Zero on top (north)
-    ax.grid(True)
+    # ax.legend()
+    #ax.grid(True)
 
 plt.show()

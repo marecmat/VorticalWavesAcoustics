@@ -55,11 +55,12 @@ q0 = 1e-3
 c0 = 343
 k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
 print(k_cav)
-k = k_cav - 1
+k = k_cav + 0.01
 om = k * c0
 
 tt = np.linspace(0, 0.03, 300)
 pt = []
+pt2 = []
 for t in tqdm(tt):
     pos1 = (R/2, np.pi/2)
     pos2 = (R/2, 0)
@@ -72,11 +73,16 @@ for t in tqdm(tt):
     p3 = pressure_field(t, om, q0, pos3, np.pi)
     p4 = pressure_field(t, om, q0, pos4, np.pi / 2)
     prt = p1 + p2 + p3 + p4
-    pt.append(prt[99, 99].real)
+    pt.append(prt[0, 60].real)
+    pt2.append(prt[20, 30].real)
 
-axs.plot(tt, pt, 'k-')
+
+axs.plot(tt, pt / max(pt), label='(1)')
+axs.plot(tt, pt2 / max(pt), label='(2)')
+axs.legend(loc='lower right')
+
 axs.set_xlabel('Time [s]')
-axs.set_ylabel('Pressure [Pa]')
+axs.set_ylabel(r'$P/P_0$ [au]')
 
     # oui = ax.pcolormesh(TT, RR, prt.real, cmap='RdBu_r')
     #fig.colorbar(oui, ax=ax)
