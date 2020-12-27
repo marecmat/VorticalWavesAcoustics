@@ -22,7 +22,7 @@ def kronecker(i, j):
 
 pts = 100
 R = 1
-M = 1; N = 0 # modes to observe in the cavity
+M = 7; N = 3 # modes to observe in the cavity
 radius = np.linspace(0, R, pts)
 theta = np.linspace(0, 2 * np.pi, pts)
 RR, TT = np.meshgrid(radius, theta)
@@ -54,10 +54,11 @@ q0 = 1e-3
 c0 = 343
 k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
 print(k_cav)
-k = k_cav + 0.01
+k = k_cav + 1
 om = k * c0
+print(om / 2 * np.pi)
 
-for t, ax in zip([0, .8e-3, 1.6e-3, 5e-3], axs.flat):
+for t, ax in zip([0, 5e-5, 7e-5, 10e-5], axs.flat):
     pos1 = (R/2, np.pi/2)
     pos2 = (R/2, 0)
     pos3 = (R/2, 3*np.pi/2)
