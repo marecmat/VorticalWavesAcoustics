@@ -59,10 +59,10 @@
     \put(0.41139295,0.40760002){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}180 °\end{tabular}}}}%
     \put(0.07987716,0.78287463){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}270 °\end{tabular}}}}%
     \put(0.76759857,0.74665908){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}90 °\end{tabular}}}}%
-    \put(0.46237667,0.98054866){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Phi_1 = 3\pi/2$\end{tabular}}}}%
-    \put(0.64425146,0.79159491){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Phi_2 $= 0\end{tabular}}}}%
-    \put(0.26933194,0.78881355){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Phi_4 = \pi$\end{tabular}}}}%
-    \put(0.45582047,0.60841917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\Phi_4 = \pi/2$\end{tabular}}}}%
+    \put(0.46237667,0.98054866){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\phi_1 = 3\pi/2$\end{tabular}}}}%
+    \put(0.64425146,0.79159491){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\phi_2 $= 0\end{tabular}}}}%
+    \put(0.26933194,0.78881355){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\phi_4 = \pi$\end{tabular}}}}%
+    \put(0.45582047,0.60841917){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\phi_4 = \pi/2$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{contour_time.pdf}}%
     \put(0.11929003,0.03407446){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}0\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{contour_time.pdf}}%
