@@ -11,9 +11,9 @@ font = {'family': 'serif',
 mpl.rc('font', **font)
 
 fig, axs = plt.subplots(
-    2, 2,
+    1, 4,
     subplot_kw={'projection': 'polar'},
-    tight_layout=False,
+    tight_layout=True,
     figsize=(7.1, 5)
 )
 
@@ -22,7 +22,7 @@ def kronecker(i, j):
 
 pts = 100
 R = 1
-M = 7; N = 3 # modes to observe in the cavity
+M = 2; N = 2 # modes to observe in the cavity
 radius = np.linspace(0, R, pts)
 theta = np.linspace(0, 2 * np.pi, pts)
 RR, TT = np.meshgrid(radius, theta)
@@ -54,40 +54,29 @@ q0 = 1e-3
 c0 = 343
 k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
 print(k_cav)
-k = k_cav + 1
+k = k_cav + 0.00001
 om = k * c0
 print(om / 2 * np.pi)
 
-for t, ax in zip([0, 5e-5, 7e-5, 10e-5], axs.flat):
-    pos1 = (R/2, np.pi/2)
-    pos2 = (R/2, 0)
-    pos3 = (R/2, 3*np.pi/2)
-    pos4 = (R/2, np.pi)
+rr = 0.5
+nb_source = 25
 
-    p1 = pressure_field(t, om, q0, pos1, 0)
-    ax.plot(pos1[1], pos1[0], 'ko', mfc='none', label='source 1')
-    p2 = pressure_field(t, om, q0, pos2, 3 * np.pi / 2)
-    ax.plot(pos2[1], pos2[0], 'ko', mfc='none', label='source 2')
-    p3 = pressure_field(t, om, q0, pos3, np.pi)
-    ax.plot(pos3[1], pos3[0], 'ko', mfc='none', label='source 1')
-    p4 = pressure_field(t, om, q0, pos4, np.pi / 2)
-    ax.plot(pos4[1], pos4[0], 'ko', mfc='none', label='source 2')
+for t, ax in zip([2e-4, 5e-4, 7e-4, 9e-4], axs.flat):
+    prt = np.zeros((pts, pts), dtype=complex)
+    for n in range(nb_source):
+        pos = (rr, (2 * n * np.pi / nb_source))
+        ax.plot(pos[1], pos[0], 'ko', mfc='none')
+        p = pressure_field(t, om, q0, pos, 2 * n * np.pi / nb_source)
+        prt += p
 
-    # pos3 = (R/2, 4 * np.pi / 3)
-    # p3 = pressure_field(t, om, q0, pos3, pos2[1])
-    # ax.plot(pos3[1], pos3[0], 'mo', label='source 3')
-    prt = p1 + p2 + p3 + p4
-    # ax.plot(theta[0], radius[50], 'm*')
-
-
-    oui = ax.pcolormesh(TT, RR, prt.real)#, cmap='RdBu_r')
-    fig.colorbar(oui, ax=ax)
+    oui = ax.pcolormesh(TT, RR, prt.real, cmap='RdBu_r')
+    # fig.colorbar(oui, ax=ax)
     ax.set_title("t = {:.4f} s".format(t))
     ax.set_rticks([0, R/4, R/2, 3*R/4, R])
     # ax.set_rlabel_position(-np.pi/2)
     ax.set_xticks(np.pi/180. * np.arange(45, 316, 90))
     ax.set_theta_direction(-1)
     ax.set_theta_zero_location("N") # Zero on top (north)
-    #ax.grid(True)
+    #ax.grid(True) 
 
 plt.show()

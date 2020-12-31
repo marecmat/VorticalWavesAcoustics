@@ -3,7 +3,6 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 import scipy.special as sp
 from tqdm import tqdm
-import plotly.graph_objects as go
 import numpy as np
 
 fig, ax = plt.subplots(
@@ -69,29 +68,16 @@ X = R * np.cos(T)
 Y = R * np.sin(T)
 p1 = p1.real
 
-fig = go.Figure(data=go.Volume(
-    x=X.flatten(),
-    y=Y.flatten(),
-    z=Z.flatten(),
-    value=p1.flatten(),
-    isomin=0.1,
-    isomax=0.8,
-    opacity=0.1, # needs to be small to see through all surfaces
-    surface_count=17, # needs to be a large number for good volume rendering
-    ))
-fig.show()
-
-
 # Cylinder
-#x=np.linspace(-1, 1, 100)
-#z=np.linspace(-2, 2, 100)
-#Xc, Zc=np.meshgrid(x, z)
-#Yc = np.sqrt(1-Xc**2)
-#
-## Draw parameters
-#ax.plot_surface(Xc, Yc, Zc, fc='b', alpha=0.2)
-#ax.plot_surface(Xc, -Yc, Zc, fc='b', alpha=0.2)
-#ax.set_xlabel("X")
-#ax.set_ylabel("Y")
-#ax.set_zlabel("Z")
+x=np.linspace(-1, 1, 100)
+z=np.linspace(-2, 2, 100)
+Xc, Zc=np.meshgrid(x, z)
+Yc = np.sqrt(1-Xc**2)
+
+# Draw parameters
+ax.plot_surface(Xc, Yc, Zc, color=, fc='b', alpha=0.2)
+ax.plot_surface(Xc, -Yc, Zc, color=, fc='b', alpha=0.2)
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
 plt.show()

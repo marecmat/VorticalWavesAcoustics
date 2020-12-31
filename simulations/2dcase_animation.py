@@ -57,25 +57,19 @@ k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
 k = k_cav + 0.000001
 om = k * c0
 
-time = np.linspace(1e-6, 1e-2, 200)
+time = np.arange(0, 10e-3, 1e-4)
 rr = 0.5
-pos1 = (rr, 0)
-pos3 = (rr, np.pi / 5)
-pos5 = (rr, 3 * np.pi / 5)
-pos7 = (rr, 6 * np.pi / 5)
-pos9 = (rr, 7 * np.pi / 5)
-# ax.plot(pos1[1], pos1[0], 'ko', mfc='none', label='source 1')
-
+nb_source = 50
 pr_time = []
 
 for t in tqdm(time):
-    p1 = pressure_field(t, om, q0, pos1, 0)
-    p3 = pressure_field(t, om, q0, pos3, 1 * np.pi / 5)
-    p5 = pressure_field(t, om, q0, pos3, 3 * np.pi / 5)
-    p7 = pressure_field(t, om, q0, pos3, 5 * np.pi / 5)
-    p9 = pressure_field(t, om, q0, pos3, 7 * np.pi / 5)
+    prt = np.zeros((pts, pts), dtype=complex)
+    for n in range(nb_source):
+        pos = (rr, (2 * n * np.pi / nb_source))
+        ax.plot(pos[1], pos[0], 'ko', mfc='none')
+        p = pressure_field(t, om, q0, pos, 2 * n * np.pi / nb_source)
+        prt += p
 
-    prt = p1 + p3 + p5 + p7 + p9
     pr_time.append(prt)
 
 # Initialisation de l'animation
@@ -102,8 +96,10 @@ anim = animation.FuncAnimation(
         fig, 
         animate, 
         frames=len(time), 
-        interval=20, 
+        interval=70, 
         blit=False, 
-        repeat=True)
+        repeat=True
+)
+
 # anim.save('animation2.gif', writer='imagemagick', fps=30)
 plt.show()

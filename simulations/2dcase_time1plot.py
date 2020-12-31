@@ -55,6 +55,7 @@ c0 = 343
 k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
 k = k_cav + 0.01
 om = k * c0
+print(k * c0 / 2 * np.pi, k_cav * c0 / 2 * np.pi)
 
 ax = axs
 for t, cm in zip([1.3e-3, 1.8e-3, 2.3e-3, 2.8e-3], ['Purples', 'Blues', 'Greens', 'Oranges']):
