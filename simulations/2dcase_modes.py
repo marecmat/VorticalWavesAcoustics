@@ -26,7 +26,7 @@ def nearid(array, value):
 
 pts = 100
 R = 1
-M = 1; N = 0 # modes to observe in the cavity
+M = 2; N = 2 # modes to observe in the cavity
 radius = np.linspace(0, R, pts)
 theta = np.linspace(0, 2 * np.pi, pts)
 RR, TT = np.meshgrid(radius, theta)
@@ -36,12 +36,12 @@ def amps(m, n, pos, om, q0):
     dm0 = kronecker(m, 0)
     kmn = sp.jnp_zeros(m, n + 1)[-1] / R 
     qstar = -1j * om * q0
-    
+    print(sp.jv(m, 0))
     bst = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
     #print(bst, kmn)
-    amn = (2 * qstar * r0 * np.cos(m * a0) * kmn**2) \
+    amn = (2 * qstar * np.cos(m * a0) * kmn**2) \
             / ((1 + dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
-    bmn = (2 * qstar * r0 * np.sin(m * a0) * kmn**2) \
+    bmn = (2 * qstar * np.sin(m * a0) * kmn**2) \
             / ((1 - dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
     return amn, bmn, kmn
 
@@ -65,11 +65,11 @@ for M in range(1, 3):
         om = k * c0
 
         ax = axs[N, M - 1]
-        pos1 = (0.5, np.pi) #(R, 0)#(R/2, 3*np.pi/2)#(R/2, 0)
+        pos1 = (0, 0) #(R, 0)#(R/2, 3*np.pi/2)#(R/2, 0)
         p = pressure_field(M, N, om, q0, pos1, 0)
-        ps = p[nearid(radius, pos1[0]), nearid(theta, pos1[1])]
-        print(M, N, ps)
-        p = p / ps #/ p[nearid(radius, pos1[0]), nearid(theta, pos1[1])]
+        # ps = p[nearid(radius, pos1[0]), nearid(theta, pos1[1])]
+        print(M, N)
+        p = p #/ p[nearid(radius, pos1[0]), nearid(theta, pos1[1])]
 
         ax.plot(pos1[1], pos1[0], 'ko', mfc='none')
         prt = p # + p2 + p3 + p4

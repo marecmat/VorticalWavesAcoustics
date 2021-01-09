@@ -39,9 +39,9 @@ def amps(m, n, pos, om, q0):
     
     bst = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
     #print(bst, kmn)
-    amn = (2 * qstar * r0 * np.cos(m * a0) * kmn**2) \
+    amn = (2 * qstar * np.cos(m * a0) * kmn**2) \
             / ((1 + dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
-    bmn = (2 * qstar * r0 * np.sin(m * a0) * kmn**2) \
+    bmn = (2 * qstar * np.sin(m * a0) * kmn**2) \
             / ((1 - dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
     return amn, bmn, kmn
 

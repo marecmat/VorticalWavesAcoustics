@@ -23,7 +23,7 @@ def kronecker(i, j):
 
 pts = 100
 R = 1
-M = 3; N = 2 # modes to observe in the cavity
+M = 5; N = 3 # modes to observe in the cavity
 radius = np.linspace(0, R, pts)
 theta = np.linspace(0, 2 * np.pi, pts)
 RR, TT = np.meshgrid(radius, theta)
@@ -36,9 +36,9 @@ def amps(m, n, pos, om, q0):
     
     bst = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
     #print(bst, kmn)
-    amn = (2 * qstar * r0 * np.cos(m * a0) * kmn**2) \
+    amn = (2 * qstar * np.cos(m * a0) * kmn**2) \
             / ((1 + dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
-    bmn = (2 * qstar * r0 * np.sin(m * a0) * kmn**2) \
+    bmn = (2 * qstar * np.sin(m * a0) * kmn**2) \
             / ((1 - dm0) * np.pi * (k**2 - kmn**2) * ((kmn * R)**2 - m**2)) * bst
     return amn, bmn, kmn
 
@@ -46,6 +46,7 @@ def pressure_field(t, om, q0, pos, phi):
     prt = np.zeros((pts, pts), dtype=complex)
     for m in range(1, M + 1):
         for n in range(0, N + 1):
+    # m = M; n = N
             amn, bmn, kmn = amps(m, n, pos, om, q0)
             p_given_mode = (amn * np.cos(m * TT) + bmn * np.sin(m * TT)) * sp.jv(m, kmn * RR)
             prt += p_given_mode    
@@ -58,8 +59,8 @@ k = k_cav + 0.000001
 om = k * c0
 
 time = np.arange(0, 10e-3, 1e-4)
-rr = 0.5
-nb_source = 50
+rr = 3*R/4
+nb_source = 5
 pr_time = []
 
 for t in tqdm(time):

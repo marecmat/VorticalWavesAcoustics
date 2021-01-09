@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{5}%
+\begin{thebibliography}{6}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -54,14 +54,17 @@
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~H.}\ \bibnamefont
   {Ceperley}},\ }\bibfield  {title} {\bibinfo {title} {Rotating waves},\
-  }\href@noop {} {\  (\bibinfo {year} {1992})}\BibitemShut {NoStop}%
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {American Journal
+  of Physics 60, 938 (1992); doi: 10.1119/1.17020}\ } (\bibinfo {year}
+  {1992})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Ceperley}\ and\ \citenamefont
   {Velazco}(1995)}]{ceperley1995}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.~H.}\ \bibnamefont
   {Ceperley}}\ and\ \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
   {Velazco}},\ }\bibfield  {title} {\bibinfo {title} {Tuning a rotating wave
-  resonator},\ }\href@noop {} {\  (\bibinfo {year} {1995})}\BibitemShut
+  resonator},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {Review of Scientific Instruments}\ } (\bibinfo {year} {1995})}\BibitemShut
   {NoStop}%
 \bibitem [{\citenamefont {Santillán}\ and\ \citenamefont
   {Volke-Sepúlveda}(2009)}]{santillan2009}%
@@ -70,20 +73,30 @@
   {Santillán}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
   {Volke-Sepúlveda}},\ }\bibfield  {title} {\bibinfo {title} {A demonstration
   of rotating sound waves in free space and the transfer of their angular
-  momentum to matter},\ }\href@noop {} {\  (\bibinfo {year}
-  {2009})}\BibitemShut {NoStop}%
+  momentum to matter},\ }\href@noop {} {\bibfield  {journal} {\bibinfo
+  {journal} {American Journal of Physics 77, 209 (2009); doi:
+  10.1119/1.3056580}\ } (\bibinfo {year} {2009})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Friedlander}\ and\ \citenamefont
+  {Joshi}(1982)}]{friedlander}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {F.~G.}\ \bibnamefont
+  {Friedlander}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Joshi}},\ }\href@noop {} {\emph {\bibinfo {title} {Introduction to the
+  theory of distributions}}}\ (\bibinfo  {publisher} {Cambdridge University
+  Press},\ \bibinfo {year} {1982})\ p.~\bibinfo {pages} {83}\BibitemShut
+  {NoStop}%
 \bibitem [{\citenamefont {Rona}(2007)}]{rona2007}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
   {Rona}},\ }\bibfield  {title} {\bibinfo {title} {The acoustic resonance of
-  rectangular and cylindrical cavities},\ }\href@noop {} {\  (\bibinfo {year}
-  {2007})}\BibitemShut {NoStop}%
+  rectangular and cylindrical cavities},\ }\href@noop {} {\bibfield  {journal}
+  {\bibinfo  {journal} {Journal of Algorithms \& Computational Technology}\ }
+  (\bibinfo {year} {2007})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Abramovitz}\ and\ \citenamefont
   {Stegun}(1964)}]{abramsteg}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Abramovitz}}\ and\ \bibinfo {author} {\bibfnamefont {I.~A.}\ \bibnamefont
   {Stegun}},\ }\href@noop {} {\emph {\bibinfo {title} {Handbook of mathematical
-  functions}}}\ (\bibinfo  {publisher} {National Bureau of Standards Applied
-  Mathematics Series},\ \bibinfo {year} {1964})\BibitemShut {NoStop}%
+  functions}}}\ (\bibinfo {year} {1964})\BibitemShut {NoStop}%
 \end{thebibliography}%
