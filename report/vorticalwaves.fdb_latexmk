@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex vorticalwaves"] 1610027336 "vorticalwaves.aux" "vorticalwaves.bbl" "vorticalwaves" 1610108410
+["bibtex vorticalwaves"] 1610195149 "vorticalwaves.aux" "vorticalwaves.bbl" "vorticalwaves" 1610195184
   "/usr/share/texmf-dist/bibtex/bst/revtex/apsrev4-2.bst" 1607185529 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "biblio.bib" 1609846639 1619 ea28247f879f18e84ed28a50bdcc66e6 ""
-  "vorticalwaves.aux" 1610029101 8075 b82d7b282720fe8ae253705aeeb3a034 "pdflatex"
-  "vorticalwavesNotes.bib" 1610029101 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
+  "biblio.bib" 1610194608 1619 f24be7e364af3c822b2de2e980856c5a ""
+  "vorticalwaves.aux" 1610195184 7780 6f93ad1a8b35c8cd8494ec6df62d7da2 "pdflatex"
+  "vorticalwavesNotes.bib" 1610195184 104 4d8bb863c86f3d7b03a471e9d4707f34 "pdflatex"
   (generated)
-  "vorticalwaves.blg"
   "vorticalwaves.bbl"
-["pdflatex"] 1610029101 "vorticalwaves.tex" "vorticalwaves.pdf" "vorticalwaves" 1610108410
+  "vorticalwaves.blg"
+["pdflatex"] 1610195183 "vorticalwaves.tex" "vorticalwaves.pdf" "vorticalwaves" 1610195184
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1607249373 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1607249373 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1607249373 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
@@ -134,13 +134,13 @@
   "figures/pleindesources.png" 1609408008 177111 4262ae579b306332aa3dc82319f32ef5 ""
   "figures/schema.pdf" 1607273921 35085 cfb10e088251e5f20002fd7af71e88a6 ""
   "figures/source_pos.png" 1608043261 178571 f58ccc11576a78f624ea7083bbe65075 ""
-  "vorticalwaves.aux" 1610029101 8075 b82d7b282720fe8ae253705aeeb3a034 "pdflatex"
-  "vorticalwaves.bbl" 1610027337 4830 3c79e68c04e503b2c0da43f381f4bea5 "bibtex vorticalwaves"
-  "vorticalwaves.out" 1610029101 1176 f03e9ac1ea00c109d23d3b67b844bd43 "pdflatex"
-  "vorticalwaves.tex" 1610029106 24557 3b1223e4d7b4af0272a205bec9a88c6e ""
+  "vorticalwaves.aux" 1610195184 7780 6f93ad1a8b35c8cd8494ec6df62d7da2 "pdflatex"
+  "vorticalwaves.bbl" 1610195149 4914 5e4ff3a62d9101a9ca3a6d9882b516ca "bibtex vorticalwaves"
+  "vorticalwaves.out" 1610195184 990 f92a4e787af236157561fc3615b67268 "pdflatex"
+  "vorticalwaves.tex" 1610195148 28379 d5b3e63a592f8ca7dd44dd0379481e9a ""
   (generated)
-  "vorticalwaves.out"
-  "vorticalwaves.pdf"
   "vorticalwaves.aux"
   "vorticalwaves.log"
   "vorticalwavesNotes.bib"
+  "vorticalwaves.out"
+  "vorticalwaves.pdf"

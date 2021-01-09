@@ -98,5 +98,6 @@
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
   {Abramovitz}}\ and\ \bibinfo {author} {\bibfnamefont {I.~A.}\ \bibnamefont
   {Stegun}},\ }\href@noop {} {\emph {\bibinfo {title} {Handbook of mathematical
-  functions}}}\ (\bibinfo {year} {1964})\BibitemShut {NoStop}%
+  functions}}}\ (\bibinfo  {publisher} {National Bureau of Standards Applied
+  Mathematics Series},\ \bibinfo {year} {1964})\BibitemShut {NoStop}%
 \end{thebibliography}%

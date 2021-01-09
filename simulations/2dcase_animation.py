@@ -49,7 +49,7 @@ def pressure_field(t, om, q0, pos, phi):
 # cavity parameters
 R = 1                                       # Radius of the cavity
 c0 = 343                                    # sound velocity (m/s)
-M = 7; N = 3                                # modes to observe in the cavity
+M = 6; N = 2                                # modes to observe in the cavity
 print("mode: ", M, N)
 pts    = 100                                # number of points contained in the matrix 
 k_cav  = sp.jnp_zeros(M, N + 1)[-1] / R
@@ -60,8 +60,8 @@ RR, TT = np.meshgrid(radius, theta)
 # source parameters
 q0 = 1e-5                                   # mass flow rate of the source
 om = (k_cav + 0.0001) * c0                  # excitation frequency of the source
-rr = R/2                                  # radial position
-nb_source = 5
+rr = 3*R/4                                  # radial position
+nb_source = 3
 
 pr_time = []
 time = np.arange(0, 10e-3, 1e-4)
@@ -114,6 +114,6 @@ anim = animation.FuncAnimation(
         repeat=True
 )
 gifname = "{}sources_{}{}.gif".format(nb_source, M, N)
-anim.save(gifname, writer='imagemagick', fps=30)
-print(gifname)
+# anim.save(gifname, writer='imagemagick', fps=30)
+# print(gifname)
 plt.show()
