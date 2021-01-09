@@ -21,17 +21,11 @@ fig, ax = plt.subplots(
 def kronecker(i, j):
     return 1 if i == j else 0
 
-pts = 100
-R = 1
-M = 5; N = 3 # modes to observe in the cavity
-radius = np.linspace(0, R, pts)
-theta = np.linspace(0, 2 * np.pi, pts)
-RR, TT = np.meshgrid(radius, theta)
-
 def amps(m, n, pos, om, q0):
     r0, a0 = pos
     dm0 = kronecker(m, 0)
     kmn = sp.jnp_zeros(m, n + 1)[-1] / R 
+    k = om / c0
     qstar = om * q0
     
     bst = sp.jv(m, kmn * r0) / sp.jv(m, kmn * R)**2
@@ -52,23 +46,41 @@ def pressure_field(t, om, q0, pos, phi):
             prt += p_given_mode    
     return prt * np.exp(1j * (om * t - phi))
 
-q0 = 1e-3
-c0 = 343
-k_cav = (sp.jnp_zeros(M, N + 1)[-1] / R)# + 150
-k = k_cav + 0.000001
-om = k * c0
+# cavity parameters
+R = 1                                       # Radius of the cavity
+c0 = 343                                    # sound velocity (m/s)
+M = 7; N = 3                                # modes to observe in the cavity
+print("mode: ", M, N)
+pts    = 100                                # number of points contained in the matrix 
+k_cav  = sp.jnp_zeros(M, N + 1)[-1] / R
+radius = np.linspace(0, R, pts)
+theta  = np.linspace(0, 2 * np.pi, pts)
+RR, TT = np.meshgrid(radius, theta)
 
-time = np.arange(0, 10e-3, 1e-4)
-rr = 3*R/4
+# source parameters
+q0 = 1e-5                                   # mass flow rate of the source
+om = (k_cav + 0.0001) * c0                  # excitation frequency of the source
+rr = R/2                                  # radial position
 nb_source = 5
+
 pr_time = []
+time = np.arange(0, 10e-3, 1e-4)
+
+poss = [(rr, 0), (rr, np.pi/2)]
+phases = [0, 2*np.pi/3]
 
 for t in tqdm(time):
     prt = np.zeros((pts, pts), dtype=complex)
     for n in range(nb_source):
-        pos = (rr, (2 * n * np.pi / nb_source))
+        pos = (rr, 2 * n * np.pi / nb_source)
+        phase = 2 * (nb_source - n) * np.pi / nb_source
+        # phase = 2 * n * np.pi / nb_source
+        # pos = poss[n]
+        # phase = phases[n]
+        if t == 0:
+            print(pos, phase)
         ax.plot(pos[1], pos[0], 'ko', mfc='none')
-        p = pressure_field(t, om, q0, pos, 2 * n * np.pi / nb_source)
+        p = pressure_field(t, om, q0, pos, phase)
         prt += p
 
     pr_time.append(prt)
@@ -101,6 +113,7 @@ anim = animation.FuncAnimation(
         blit=False, 
         repeat=True
 )
-
-# anim.save('animation2.gif', writer='imagemagick', fps=30)
+gifname = "{}sources_{}{}.gif".format(nb_source, M, N)
+anim.save(gifname, writer='imagemagick', fps=30)
+print(gifname)
 plt.show()
